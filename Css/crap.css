@@ -102,9 +102,14 @@ p{
 }
 
 .flexItem3{
-    padding: 10px;
+    padding: 30px;
     flex: 30%;
     align-items: center;
+    align-content: row;
+    border: 20px;
+    background-color: #333;
+    border-radius: 5%;
+    
 }
 
 .flexItem3 img{
@@ -150,4 +155,8 @@ h3{
 .footer{
     background-color: #67161F;
     align-content: flex-end;
+}
+
+h2{
+    text-align: center;
 }
