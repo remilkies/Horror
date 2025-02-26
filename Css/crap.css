@@ -5,15 +5,41 @@ body{
 }
 
 .splashScreen img{
-    padding: 3em;
+    display: inline;
+    padding: 1em;
     padding-top: 0;
-    width: 1364px;
+    align-content: center;
     height: max-content;
+    width: 1300px;
+    
+}
+
+.splashScreen{
+    position: relative;
+    text-align: center;
+}
+
+.textContainer{
+    font-family: "chonky";
+    color: #AD2F33;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+
+    display: block;
+    position: absolute;
+    justify-content: center;
+    top: 10em;
+    left: 35%;
 }
 
 .button img{
     display: block;
     margin: auto;
+    position: absolute;
+    top: 40em;
+    left: 45%;
+    
 }
 
 .topNav{
@@ -21,10 +47,10 @@ body{
     overflow: hidden;
     background-color: #67161F;
     border-radius: 15px;
-    margin: 3em;
+    margin: 2em;
     margin-bottom: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    position: sticky;
+    top:0
 }
 
 .topNav a{
@@ -59,12 +85,6 @@ h1{
     text-transform: uppercase;
 }
 
-p{
-    color: white;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
-}
-
 .flexContainer{
     display: flex;
     justify-content: space-between;
@@ -85,6 +105,10 @@ p{
     background-color: #333;
     border-radius: 5%;
     
+}
+
+.flexItem3:hover{
+    background-color: #67161F;
 }
 
 .flexItem3 img{
@@ -108,7 +132,6 @@ h3{
 
 .footer{
     background-color: #67161F;
-    align-content: flex-end;
 }
 
 h2{
