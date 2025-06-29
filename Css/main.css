@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #F0DBBE;
+    background-image: url(../assets/images/Splash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.offcanvas-title{
+    font-family: "Creepster", system-ui;
+    color: #F0DBBE;
+    font-size: 50px;
+}
+
+.navbar{
+    background-color: #67161F;
+}
+
+.navbar-toggler-icon{
+    color: #F0DBBE;
+}
+
+.offcanvas{
+    background-color: #67161F;
+}
+
+.dropdown-item{
+    color: #F0DBBE;
+    text-decoration: line-through;
+    font-size: 20px;
+}
+
+.dropdown-item:hover{
+    text-decoration: none;
+    color: #F0DBBE;
+}
+
+.dropdown-item.active{
+    color: #F0DBBE;
+    text-decoration: none;
+}
+
+.movieItem{
+    padding: 30px;
+    flex: 30%;
+    align-items: center;
+    align-content: row;
+    border: 20px;
+    background-color: #333;
+    border-radius: 5%;
+    margin: 2em;
+    
+}
+
+.movieItem:hover{
+    background-color: #67161F;
+}
+
+.movieItem img{
+    width: 13.5em;
+    height: 20em;
+    
+}
