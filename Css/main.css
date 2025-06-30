@@ -2,10 +2,6 @@ body{
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #F0DBBE;
-    background-image: url(../assets/images/Splash.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
 }
 
 .creepster-regular {
@@ -14,6 +10,14 @@ body{
     font-style: normal;
   }
   
+  header{
+    background-image: url(../assets/images/Splash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 600px;
+  }
+
 .offcanvas-title{
     font-family: "Creepster", system-ui;
     color: #F0DBBE;
@@ -48,20 +52,28 @@ body{
     text-decoration: none;
 }
 
+.splashContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Creepster", system-ui;
+    color: #67161F;
+}
+
 .movieItem{
     padding: 30px;
     flex: 30%;
     align-items: center;
     align-content: row;
     border: 20px;
-    background-color: #333;
+    background-color: #67161F;
     border-radius: 5%;
     margin: 2em;
     
 }
 
 .movieItem:hover{
-    background-color: #67161F;
+    background-color: #AD2F33;
 }
 
 .movieItem img{
