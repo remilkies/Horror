@@ -61,6 +61,8 @@ body{
 }
 
 .movieItem{
+    font-family: "Creepster", system-ui;
+    color: #F0DBBE;
     padding: 30px;
     flex: 30%;
     align-items: center;
