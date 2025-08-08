@@ -1,4 +1,14 @@
-const url = 'https://imdb236.p.rapidapi.com/api/imdb/search?type=movie&genre=Drama&rows=25&sortOrder=ASC&sortField=id';
+class Movie{
+  constructor(title, genre, image, desc){
+    this.title = title;
+    this.genre = genre;
+    this.image = image;
+    this.desc = desc;
+  }
+}
+
+!async function(){
+  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt28821371/poster';
 const options = {
 	method: 'GET',
 	headers: {
@@ -14,6 +24,26 @@ try {
 } catch (error) {
 	console.error(error);
 }
+}
+
+const url = 'https://imdb236.p.rapidapi.com/api/imdb/search?type=movie&genre=Drama&rows=25&sortOrder=ASC&sortField=id';
+const options = {
+	method: 'GET/titles/tt28821371',
+	headers: {
+		'x-rapidapi-key': 'f6f00d2ab9msh59e2e58dc19f7bbp1247c7jsn1ab6efafe253',
+		'x-rapidapi-host': 'imdb236.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+
+
 
 console.log("Welcome to Spoilt Milk")
 

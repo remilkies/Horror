@@ -17,6 +17,9 @@ body{
     font-size: 50px;
 }
 
+header{
+margin-bottom: 5%;
+}
 .navbar{
     background-color: #67161F;
 }
