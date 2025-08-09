@@ -7,40 +7,35 @@ class Movie{
   }
 }
 
-!async function(){
-  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt0816692/poster';
+!async function(){ //step 1
+
+  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt28821371';
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': 'f6f00d2ab9msh59e2e58dc19f7bbp1247c7jsn1ab6efafe253',
+      'x-rapidapi-key': '85a3293347msh341b57b0132f25ep100f98jsn6d6bf29d1206',
       'x-rapidapi-host': 'imdb236.p.rapidapi.com'
     }
   };
-  
-  // try {
-  //   let response = await fetch(url, options);
-  //   const result = await response.text();
-  //   console.log(result);
-  // } catch (error) {
-  //   console.error(error);
-  // }
-
-//aparetly this code is redundent
-// let data = await fetch(url, options) //bc i already have await in front of fetch
-// .then ((response)=> response.json()) 
-// .then ((result)=> {return result})//then chain .then() after which is a promise chain?? that make's the await unnesisary
-// .catch ((error)=> console.error(error));
 
 let data = await fetch(url, options)
 .then((response) => response.json())
 .catch((error) => console.error(error));
 
-console.log(data);
+console.log(data); 
 
-let image = data.movies?.image || "";
+let image = data.primaryImage || "NOT RECIEVING IMAGE AHHHHH"; //step 3 create object
+let desc = data.description || "null desc";
+let title = data.primaryTitle || "null title";
+let genre = data.genres || "null genre";
 
-let newMovie = new Movie("Title here", "Genre here", image, "Description here"); //need to pass all four parameters (or at least placeholders for the missing ones) bc of the way the constructor of the class is set up
-  document.getElementById('madsPoster').src = newMovie.image; //img tags have no innerHTML, they display whatever image file the src is linked to
+let newMovie = new Movie(title, genre, image, desc); 
+
+document.getElementById('madsPoster').src = newMovie.image; //img tags have no innerHTML, they display whatever image file the src is linked to
+document.getElementById('madsInfo').innerHTML = newMovie.desc;
+document.getElementById('madsTitle').innerHTML = newMovie.title;
+document.getElementById('madsGenre').innerHTML = newMovie.genre;
+
   console.log(newMovie);
 }();
 
