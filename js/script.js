@@ -8,40 +8,41 @@ class Movie{
 }
 
 !async function(){
-  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt28821371/poster';
-const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': 'f6f00d2ab9msh59e2e58dc19f7bbp1247c7jsn1ab6efafe253',
-		'x-rapidapi-host': 'imdb236.p.rapidapi.com'
-	}
-};
+  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt0816692/poster';
+  const options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': 'f6f00d2ab9msh59e2e58dc19f7bbp1247c7jsn1ab6efafe253',
+      'x-rapidapi-host': 'imdb236.p.rapidapi.com'
+    }
+  };
+  
+  // try {
+  //   let response = await fetch(url, options);
+  //   const result = await response.text();
+  //   console.log(result);
+  // } catch (error) {
+  //   console.error(error);
+  // }
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
-}
+//aparetly this code is redundent
+// let data = await fetch(url, options) //bc i already have await in front of fetch
+// .then ((response)=> response.json()) 
+// .then ((result)=> {return result})//then chain .then() after which is a promise chain?? that make's the await unnesisary
+// .catch ((error)=> console.error(error));
 
-const url = 'https://imdb236.p.rapidapi.com/api/imdb/search?type=movie&genre=Drama&rows=25&sortOrder=ASC&sortField=id';
-const options = {
-	method: 'GET/titles/tt28821371',
-	headers: {
-		'x-rapidapi-key': 'f6f00d2ab9msh59e2e58dc19f7bbp1247c7jsn1ab6efafe253',
-		'x-rapidapi-host': 'imdb236.p.rapidapi.com'
-	}
-};
+let data = await fetch(url, options)
+.then((response) => response.json())
+.catch((error) => console.error(error));
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
+console.log(data);
+
+let image = data.movies?.image || "";
+
+let newMovie = new Movie("Title here", "Genre here", image, "Description here"); //need to pass all four parameters (or at least placeholders for the missing ones) bc of the way the constructor of the class is set up
+  document.getElementById('madsPoster').src = newMovie.image; //img tags have no innerHTML, they display whatever image file the src is linked to
+  console.log(newMovie);
+}();
 
 
 
