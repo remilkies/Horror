@@ -7,7 +7,7 @@ class Movie{
   }
 }
 
-!async function(){ //step 1
+!async function(){  //MadS
 
   const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt28821371';
   const options = {
@@ -97,4 +97,33 @@ function search_sections() {
     list.style.display = anyVisible ? 'block' : 'none';
   }
 
+document.addEventListener("DOMContentLoaded", function () { //verifyAge
+  let modal = new bootstrap.Modal(document.getElementById('verifyAge'));
+  modal.show();
+});// HOW DO I MAKE IT NOT SHOW IT EVERYTIME YOU LOAD THE INDEX PAGE
 
+function getValues(event){ 
+  event.preventDefault(); 
+
+  let formData = {
+      "name": this.name.value, 
+      "email": this.email.value, 
+      "subject": this.subject.value, 
+      "message": this.message.value,
+  };
+
+  let out = `
+      <p>Your Name: <span>${formData.name}</span></p>
+      <p>Email address: <span>${formData.email}</span></p>
+      <p>Subject: <span>${formData.subject || "(None provided)"}</span></p> 
+      <p>Messege: <span>${formData.message || "(None Provided)"}</span></p>
+  `
+
+  document.querySelector(".userInfo").innerHTML = out; //how you push things from java into html
+
+    // modal was triggered by submit button before js ran, removed toogle and button type to submit
+    let modal = new bootstrap.Modal(document.getElementById('contactModal'));
+    modal.show();
+
+//learning js is like learning how to use redstone in minecraft
+}

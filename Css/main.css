@@ -11,6 +11,12 @@ main{
     flex: 1;
 }
 
+button{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 .creepster-regular {
     font-family: "Creepster", system-ui;
     font-weight: 400;
@@ -27,6 +33,7 @@ main{
 header{
 margin-bottom: 5%;
 }
+
 .navbar{
     background-color: #67161F;
 }
@@ -60,15 +67,17 @@ margin-bottom: 5%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    height: 600px;
+    height: 500px;
 }
 
 .splashContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;              /* enables flexbox */
+    justify-content: center;    /* horizontal centering */
+    align-items: center;        /* vertical centering */
+    flex-direction: column;     /* stack children vertically */
     font-family: "Creepster", system-ui;
     color: #67161F;
+    padding: 10%;
 }
 
 .movieItem{
@@ -80,7 +89,7 @@ margin-bottom: 5%;
     align-content: row;
     border: 20px;
     background-color: #67161F;
-    border-radius: 5%;
+    border-radius: 16px;
     margin: 2em;
     
 }
@@ -102,6 +111,18 @@ margin-bottom: 5%;
 
 .movieContent{
     padding: 30px;
+    background-color: #AD2F33;
+    margin: 30px;
+    border-radius: 16px;
+}
+
+.footer{
+    background-color: #67161F;
+}
+
+footer h3{
+    font-family: "Creepster", system-ui;
+    color: #F0DBBE;
 }
 
 footer{
