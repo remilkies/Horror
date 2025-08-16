@@ -77,7 +77,7 @@ margin-bottom: 5%;
     flex-direction: column;     /* stack children vertically */
     font-family: "Creepster", system-ui;
     color: #67161F;
-    padding: 10%;
+    padding: 15%;
 }
 
 .movieItem{
