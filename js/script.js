@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () { //verifyAge
+  let modal = new bootstrap.Modal(document.getElementById('verifyAge'));
+  modal.show();
+});// HOW DO I MAKE IT NOT SHOW IT EVERYTIME YOU LOAD THE INDEX PAGE
+
 class Movie{
   constructor(title, genre, image, desc){
     this.title = title;
@@ -43,39 +48,10 @@ document.getElementById('madsGenre').innerHTML = newMovie.genre;
 
 console.log("Welcome to Spoilt Milk")
 
-const rem = "Remazani Malade Ngalwana";// this is a string
-console.log(rem);
-
-var genre = ["horror", "thriller", "psycological", "found-footage", "slasher"]; //array - list of things, split with commas, [use square brackets]
-console.log(genre);
-console.log(genre[0]);
-
-var object = {//used for parts of things that are all part of the same thing, you want to access at different times
-    name: "object",
-    isUseful: true,
-    parts: ["movie", "year", "genre"],
-    pairs: 4,
-}
-console.log(object);
-console.log(object.parts[0]);
 
 //UPON ENTERING WEBSITE THERE NEEDS TO BE A BLOCK THAT ASKS FOR AGE, LIKE FOR DRUGS AND PORN
 
-function getAge(){
-    var age = document.getElementById('age').value;
 
-    var ratings = ["13", "16", "18"]
-    var rating = 18;
-
-    if(age >= rating){
-        console.log("yayy, you can access this website, thanks for not lying about your age");
-    }if(rating > age && age >= 13){
-        console.log("yayy, you can enter this website BUT you're a minor so your access will be limited");
-    }if(age < 13){
-        console.log("sorry, you can't enter this website, lie about your age next time");
-    }
-
-}
 
 function search_sections() {
     const input = document.getElementById('searchbar').value.toLowerCase();
@@ -97,19 +73,12 @@ function search_sections() {
     list.style.display = anyVisible ? 'block' : 'none';
   }
 
-document.addEventListener("DOMContentLoaded", function () { //verifyAge
-  let modal = new bootstrap.Modal(document.getElementById('verifyAge'));
-  modal.show();
-});// HOW DO I MAKE IT NOT SHOW IT EVERYTIME YOU LOAD THE INDEX PAGE
 
 function getValues(event){ 
   event.preventDefault(); 
 
-  let formData = {
-      "name": this.name.value, 
-      "email": this.email.value, 
-      "subject": this.subject.value, 
-      "message": this.message.value,
+  let ageData = { //fix this/make it worky work
+      "age": this.age.value
   };
 
   let out = `
@@ -122,8 +91,22 @@ function getValues(event){
   document.querySelector(".userInfo").innerHTML = out; //how you push things from java into html
 
     // modal was triggered by submit button before js ran, removed toogle and button type to submit
-    let modal = new bootstrap.Modal(document.getElementById('contactModal'));
+    let modal = new bootstrap.Modal(document.getElementById('sussessModal'));
     modal.show();
 
 //learning js is like learning how to use redstone in minecraft
+}
+
+function getAge(){
+  var age = document.getElementById('age').value;
+  var rating = 18;
+
+  if(age >= rating){
+      console.log("yayy, you can access this website, thanks for not lying about your age");
+  }if(rating > age && age >= 13){
+      console.log("yayy, you can enter this website BUT you're a minor so your access will be limited");
+  }if(age < 13){
+      console.log("sorry, you can't enter this website, lie about your age next time");
+  }
+
 }

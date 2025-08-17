@@ -17,6 +17,13 @@ button{
     text-decoration: underline;
 }
 
+input{
+    border: none;
+    display: flex;              /* enables flexbox */
+    justify-content: center;    /* horizontal centering */
+    align-items: center;        /* vertical centering */
+    flex-direction: column; 
+}
 .creepster-regular {
     font-family: "Creepster", system-ui;
     font-weight: 400;
@@ -34,8 +41,12 @@ header{
 margin-bottom: 5%;
 }
 
+.modal-body{
+    font-family: "Creepster", system-ui;
+}
+
 .navbar{
-    background-color: #67161F;
+    background-color: #661219;
 }
 
 .navbar-toggler-icon{
@@ -71,6 +82,7 @@ margin-bottom: 5%;
 }
 
 .splashContainer{
+
     display: flex;              /* enables flexbox */
     justify-content: center;    /* horizontal centering */
     align-items: center;        /* vertical centering */
