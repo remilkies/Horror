@@ -3,6 +3,31 @@ document.addEventListener("DOMContentLoaded", function () { //verifyAge
   modal.show();
 });// HOW DO I MAKE IT NOT SHOW IT EVERYTIME YOU LOAD THE INDEX PAGE
 
+
+function getAge(){
+  var age = document.getElementById('age').value;
+  var rating = 18;
+
+  if(age >= rating){
+
+      console.log("yayy, you can access this website, thanks for not lying about your age");
+  }if(rating > age && age >= 13){    
+    let limitedAccess = new bootstrap.Modal(document.getElementById('limitedAccess'));
+    limitedAccess.show();
+      console.log("yayy, you can enter this website BUT you're a minor so your access will be limited");
+  }if(age < 13){
+    let restrictedAccess = new bootstrap.Modal(document.getElementById('restrictedAccess'));
+    restrictedAccess.show();
+      console.log("sorry, you can't enter this website, lie about your age next time");
+  }
+
+}
+
+class User{
+  constructor(age){
+    this.age = age;
+  }
+}
 class Movie{
   constructor(title, genre, image, desc){
     this.title = title;
@@ -74,39 +99,3 @@ function search_sections() {
   }
 
 
-function getValues(event){ 
-  event.preventDefault(); 
-
-  let ageData = { //fix this/make it worky work
-      "age": this.age.value
-  };
-
-  let out = `
-      <p>Your Name: <span>${formData.name}</span></p>
-      <p>Email address: <span>${formData.email}</span></p>
-      <p>Subject: <span>${formData.subject || "(None provided)"}</span></p> 
-      <p>Messege: <span>${formData.message || "(None Provided)"}</span></p>
-  `
-
-  document.querySelector(".userInfo").innerHTML = out; //how you push things from java into html
-
-    // modal was triggered by submit button before js ran, removed toogle and button type to submit
-    let modal = new bootstrap.Modal(document.getElementById('sussessModal'));
-    modal.show();
-
-//learning js is like learning how to use redstone in minecraft
-}
-
-function getAge(){
-  var age = document.getElementById('age').value;
-  var rating = 18;
-
-  if(age >= rating){
-      console.log("yayy, you can access this website, thanks for not lying about your age");
-  }if(rating > age && age >= 13){
-      console.log("yayy, you can enter this website BUT you're a minor so your access will be limited");
-  }if(age < 13){
-      console.log("sorry, you can't enter this website, lie about your age next time");
-  }
-
-}
