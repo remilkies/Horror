@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () { //verifyAge
+  preventdefault();
   let modal = new bootstrap.Modal(document.getElementById('verifyAge'));
   modal.show();
 });// HOW DO I MAKE IT NOT SHOW IT EVERYTIME YOU LOAD THE INDEX PAGE
 
-
-function getAge(){
+function getAge(){  //find a way to filter content based on age
+//UPON ENTERING WEBSITE THERE NEEDS TO BE A BLOCK THAT ASKS FOR AGE, LIKE FOR DRUGS AND PORN
   var age = document.getElementById('age').value;
   var rating = 18;
 
@@ -37,7 +38,7 @@ class Movie{
   }
 }
 
-!async function(){  //MadS
+!async function(){  
 
   const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt28821371';
   const options = {
@@ -54,12 +55,12 @@ let data = await fetch(url, options)
 
 console.log(data); 
 
-let image = data.primaryImage || "NOT RECIEVING IMAGE AHHHHH"; //step 3 create object
+let image = data.primaryImage || "NOT RECIEVING IMAGE AHHHHH"; 
 let desc = data.description || "null desc";
 let title = data.primaryTitle || "null title";
 let genre = data.genres || "null genre";
 
-let newMovie = new Movie(title, genre, image, desc); 
+let newMovie = new Movie(title, genre, image, desc); //MadS
 
 document.getElementById('madsPoster').src = newMovie.image; //img tags have no innerHTML, they display whatever image file the src is linked to
 document.getElementById('madsInfo').innerHTML = newMovie.desc;
@@ -67,14 +68,47 @@ document.getElementById('madsTitle').innerHTML = newMovie.title;
 document.getElementById('madsGenre').innerHTML = newMovie.genre;
 
   console.log(newMovie);
+
+
 }();
 
+!async function(){  //Silent Night, Deadly Night
 
+  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt34508974';
+  const options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': '85a3293347msh341b57b0132f25ep100f98jsn6d6bf29d1206',
+      'x-rapidapi-host': 'imdb236.p.rapidapi.com'
+    }
+  };
 
+let data = await fetch(url, options)
+.then((response) => response.json())
+.catch((error) => console.error(error));
+
+console.log(data); 
+
+let imageArray = data.thumbnails;
+let imageSelect = imageArray[2];
+let image = imageSelect.url || console.log("NOT RECIEVING IMAGE AHHHHH"); 
+let desc = data.description || console.log("null desc");
+let title = data.primaryTitle || console.log("null title");
+let genre = data.genres || console.log("null genre");
+
+let newMovie = new Movie(title, genre, image, desc); //Silent Night, Deadly Night
+
+document.getElementById('sndnInfo').innerHTML = newMovie.desc;
+document.getElementById('sndnTitle').innerHTML = newMovie.title;
+document.getElementById('sndnGenre').innerHTML = newMovie.genre;
+document.getElementById('sndnPoster').src = newMovie.image;
+
+  
+}();
+console.log(newMovie);
 console.log("Welcome to Spoilt Milk")
 
 
-//UPON ENTERING WEBSITE THERE NEEDS TO BE A BLOCK THAT ASKS FOR AGE, LIKE FOR DRUGS AND PORN
 
 
 
