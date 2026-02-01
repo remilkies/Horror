@@ -45,6 +45,9 @@ button{
     text-decoration: underline;
 }
 
+.moreButton{
+    width: 10%;
+}
 input{
     border: none;
     display: flex;              /* enables flexbox */
@@ -112,7 +115,7 @@ margin-bottom: 5%;
 
 .splashContainer{
 
-    display: flex;              /* enables flexbox */
+    display: flex;
     justify-content: center;    /* horizontal centering */
     align-items: center;        /* vertical centering */
     flex-direction: column;     /* stack children vertically */
