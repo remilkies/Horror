@@ -36,6 +36,7 @@ h3{
     color: #F0DBBE;
     font-size: 25px;
     text-align: center;
+    padding-top: 1em;
 }
 
 button{
@@ -140,8 +141,9 @@ margin-bottom: 5%;
 }
 
 .movieItem img{
-    width: 13.5em;
-    height: 20em;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
     
 }
 
