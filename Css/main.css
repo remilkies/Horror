@@ -11,6 +11,33 @@ main{
     flex: 1;
 }
 
+h1{
+    font-family: "Creepster", system-ui;
+    color: #67161F;
+    font-size: 60px;
+    text-align: center;
+}
+
+h2{
+    font-family: "Creepster", system-ui;
+    color: #67161F;
+    font-size: 40px;
+    text-align: center;
+}
+h3{
+    font-family: "Creepster", system-ui;
+    color: #67161F;
+    font-size: 30px;
+    text-align: center;
+}
+
+.movieItem h3{
+    font-family: "Creepster", system-ui;
+    color: #F0DBBE;
+    font-size: 25px;
+    text-align: center;
+}
+
 button{
     border: none;
     background-color: transparent;
@@ -79,6 +106,7 @@ margin-bottom: 5%;
     background-repeat: no-repeat;
     background-position: center top;
     height: 500px;
+    margin-top: -19px;
 }
 
 .splashContainer{
@@ -90,6 +118,7 @@ margin-bottom: 5%;
     font-family: "Creepster", system-ui;
     color: #67161F;
     padding: 15%;
+    margin-top: -100px;
 }
 
 .movieItem{
