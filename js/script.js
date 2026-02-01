@@ -108,7 +108,40 @@ document.getElementById('sndnPoster').src = newMovie.image;
 console.log(newMovie);
 console.log("Welcome to Spoilt Milk")
 
+!async function(){  //As Above So Below
 
+  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt2870612';
+  const options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': '85a3293347msh341b57b0132f25ep100f98jsn6d6bf29d1206',
+      'x-rapidapi-host': 'imdb236.p.rapidapi.com'
+    }
+  };
+
+let data = await fetch(url, options)
+.then((response) => response.json())
+.catch((error) => console.error(error));
+
+console.log(data); 
+
+let imageArray = data.thumbnails;
+let imageSelect = imageArray[2];
+let image = imageSelect.url || console.log("NOT RECIEVING IMAGE AHHHHH"); 
+let desc = data.description || console.log("null desc");
+let title = data.primaryTitle || console.log("null title");
+let genre = data.genres || console.log("null genre");
+
+let newMovie = new Movie(title, genre, image, desc); //Silent Night, Deadly Night
+
+document.getElementById('aasbInfo').innerHTML = newMovie.desc;
+document.getElementById('aasbTitle').innerHTML = newMovie.title;
+document.getElementById('aasbGenre').innerHTML = newMovie.genre;
+document.getElementById('aasbPoster').src = newMovie.image;
+
+  
+}();
+console.log(newMovie);
 
 
 
