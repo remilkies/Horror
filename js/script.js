@@ -24,6 +24,11 @@ function getAge(){  //find a way to filter content based on age
 
 }
 
+$('#dropdown-menu').trigger("click")(){
+  var div = $('#dripdown-menu');
+  div.animate({padding-top: '+=10px'}, 'fast');
+}
+
 class User{
   constructor(age){
     this.age = age;
