@@ -78,30 +78,11 @@ margin-bottom: 5%;
 
 .navbar{
     background-color: #661219;
+    margin-bottom: 1px;
 }
 
 .navbar-toggler-icon{
-    color: #F0DBBE;
-}
-
-.offcanvas{
-    background-color: #67161F;
-}
-
-.dropdown-item{
-    color: #F0DBBE;
-    text-decoration: line-through;
-    font-size: 20px;
-}
-
-.dropdown-item:hover{
-    text-decoration: none;
-    color: #F0DBBE;
-}
-
-.dropdown-item.active{
-    color: #F0DBBE;
-    text-decoration: none;
+    color: #F0DBBE ;
 }
 
 #splashBackground img{

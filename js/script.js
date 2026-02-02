@@ -24,10 +24,16 @@ function getAge(){  //find a way to filter content based on age
 
 }
 
-$('#dropdown-menu').trigger("click")(){
-  var div = $('#dripdown-menu');
-  div.animate({padding-top: '+=10px'}, 'fast');
-}
+// $('#navbar-toggler').trigger("click", function(){
+//   var div = $('#splashBackground');
+//   div.animate({paddingTop: '100px', opacity: '1'}, 'fast');
+// });
+
+$('#navbar-toggler').on("click", function() {
+  var div = $('#splashBackground');
+  div.animate({ paddingTop: '100px',opacity: 1, backgroundColor: '#67161F'}, 'fast'); //use camelCase for JS properties
+});
+
 
 class User{
   constructor(age){
