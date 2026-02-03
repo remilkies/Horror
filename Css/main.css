@@ -88,6 +88,16 @@ margin-bottom: 5%;
     color: #F0DBBE ;
 }
 
+#searchBar{
+    background-color: #F0DBBE;
+    border: none;
+    border-radius: 15px;
+}
+input ::placeholder{
+    font-family: "Creepster", system-ui;
+    color: #67161F;
+    opacity: 1; /* Firefox */
+}
 #splashBackground img{
     width: 100%;
     height: auto;

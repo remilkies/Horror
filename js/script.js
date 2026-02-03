@@ -36,7 +36,7 @@ function showNav() {
   console.log('nav cotent shown');
 }
 
-$('#navbar-toggler').on("click", function(openNav) {
+$('#navbar-toggler').on("click", function() {
   dropdownNav();
   showNav();
 });
