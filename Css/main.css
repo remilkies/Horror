@@ -91,6 +91,14 @@ margin-bottom: 5%;
     position: absolute;
 }
 
+#dropdown-menu{
+    background-color: #67161F;
+}
+
+#dropdown-nav{
+    display: none;
+}
+
 .splashContainer{
     display: flex;
     justify-content: center;    /* horizontal centering */

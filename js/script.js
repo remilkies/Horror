@@ -29,10 +29,17 @@ function getAge(){  //find a way to filter content based on age
 //   div.animate({paddingTop: '100px', opacity: '1'}, 'fast');
 // });
 
-$('#navbar-toggler').on("click", function() {
-  var div = $('#splashBackground');
-  div.animate({ paddingTop: '100px',opacity: 1, backgroundColor: '#67161F'}, 'fast'); //use camelCase for JS properties
+$('#navbar-toggler').on("click", function(openNav) {
+  var div = $('#dropdown-menu');
+  div.animate({ paddingTop: '10em',opacity: 1}, 'fast'); //use camelCase for JS properties
+  console.log("Navbar toggled, splash background animated.");
 });
+
+// $('#navbar-toggler').on("click", function(closeNav) {
+//   var div = $('#dropdown-menu');
+//   div.animate({ paddingTop: '0px'}, 'fast'); //use camelCase for JS properties
+//   console.log("Navbar toggled, splash background animated.");
+// });
 
 
 class User{
