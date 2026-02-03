@@ -10,7 +10,10 @@ html, body{
 main{
     flex: 1;
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 h1{
     font-family: "Creepster", system-ui;
     color: #67161F;
@@ -135,9 +138,9 @@ margin-bottom: 5%;
     
 }
 
-.movieContent h3{
+.movieContent h3, p{
     font-family: "Creepster", system-ui;
-    color: #67161F;
+    color: #F0DBBE;
 }
 
 .movieContent{
@@ -145,6 +148,10 @@ margin-bottom: 5%;
     background-color: #AD2F33;
     margin: 30px;
     border-radius: 16px;
+}
+
+#reviewContinued{
+    display: none;
 }
 
 .footer{
