@@ -14,6 +14,10 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+#dropdown-nav a{
+    color: #F0DBBE;
+}
 h1{
     font-family: "Creepster", system-ui;
     color: #67161F;
