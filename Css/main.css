@@ -17,7 +17,11 @@ a{
 
 #dropdown-nav a{
     color: #F0DBBE;
+    font-family: "Creepster", system-ui;
+    font-size: 25px;
+    text-align: center;
 }
+
 h1{
     font-family: "Creepster", system-ui;
     color: #67161F;
