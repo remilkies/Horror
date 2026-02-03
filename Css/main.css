@@ -80,7 +80,7 @@ input{
 }
 
 header{
-margin-bottom: 5%;
+    margin-bottom: 4.4%;
 }
 
 .modal-body{
@@ -89,17 +89,27 @@ margin-bottom: 5%;
 
 .navbar{
     background-color: #661219;
-    margin-bottom: 1px;
 }
 
 .navbar-toggler-icon{
-    color: #F0DBBE ;
+    background-color: #F0DBBE;
+    border-radius: 5px;
+    border
 }
 
-#searchBar{
+#searchBar input{
     background-color: #F0DBBE;
     border: none;
     border-radius: 15px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 50em;
+}
+input {
+    font-family: "Creepster", system-ui;
+    color: #67161F;
+    font-size: 20px;
+    text-align: center;
 }
 input ::placeholder{
     font-family: "Creepster", system-ui;
