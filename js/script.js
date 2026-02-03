@@ -37,15 +37,18 @@ function showNav() {
 }
 
 $('#navbar-toggler').on("click", function(openNav) {
-  var navBar = $('#dropdown-nav');
-  if (navBar.is(':visible')) {
-    navBar.hide();
-    console.log("Navbar hidden.");
-  }
   dropdownNav();
   showNav();
 });
 
+$('#navbar-close').on("click", function() {
+  var div = $('#dropdown-menu');
+  var navBar = $('#dropdown-nav');
+  navBar.hide();
+  div.animate({ paddingTop: '0em',opacity: 0}, 'slow'); //use camelCase for JS properties
+  div.hide();
+  console.log("Navbar closed, splash background animated.");
+});
 
 $('#reviewContinueBtn').on("click", function() {
   var review = $('#reviewContinued');
