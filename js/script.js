@@ -24,13 +24,6 @@ function getAge(){  //find a way to filter content based on age
 
 }
 
-// $('#navbar-toggler').trigger("click", function(){
-//   var div = $('#splashBackground');
-//   div.animate({paddingTop: '100px', opacity: '1'}, 'fast');
-// });
-
-
-
 function dropdownNav() {
   var div = $('#dropdown-menu');
   div.animate({ paddingTop: '9em',opacity: 1}, 'slow'); //use camelCase for JS properties
@@ -40,20 +33,18 @@ function dropdownNav() {
 function showNav() {
   var navBar = $('#dropdown-nav');
   navBar.show();
-  console.log('End after 1 second');
+  console.log('nav cotent shown');
 }
 
 $('#navbar-toggler').on("click", function(openNav) {
+  var navBar = $('#dropdown-nav');
+  if (navBar.is(':visible')) {
+    navBar.hide();
+    console.log("Navbar hidden.");
+  }
   dropdownNav();
   showNav();
 });
-
-
-// $('#navbar-toggler').on("click", function(closeNav) {
-//   var div = $('#dropdown-menu');
-//   div.animate({ paddingTop: '0px'}, 'fast'); //use camelCase for JS properties
-//   console.log("Navbar toggled, splash background animated.");
-// });
 
 
 $('#reviewContinueBtn').on("click", function() {
