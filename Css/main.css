@@ -101,15 +101,15 @@ header{
     background-color: #F0DBBE;
     border: none;
     border-radius: 15px;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    width: 50em;
+    padding:10px;
+    width: 40em;
+    color: #67161F;
 }
 input {
     font-family: "Creepster", system-ui;
     color: #67161F;
     font-size: 20px;
-    text-align: center;
+
 }
 input ::placeholder{
     font-family: "Creepster", system-ui;
