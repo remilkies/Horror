@@ -26,7 +26,7 @@ function getAge(){  //find a way to filter content based on age
 
 function dropdownNav() {
   var div = $('#dropdown-menu');
-  div.animate({ paddingTop: '9em',opacity: 1}, 'slow'); //use camelCase for JS properties
+  div.animate({ paddingTop: '3em',opacity: 1}, 'slow'); //use camelCase for JS properties
   console.log("Navbar toggled, splash background animated.");
 }
 
@@ -87,9 +87,9 @@ let data = await fetch('https://api.themoviedb.org/3/configuration', options)
   .then(response => response.json())
   .catch(error => console.error(error));
 
-let data = await fetch(url, options)
-.then((response) => response.json())
-.catch((error) => console.error(error));
+// let data = await fetch(url, options)
+// .then((response) => response.json())
+// .catch((error) => console.error(error));
 
 console.log(data); 
 
