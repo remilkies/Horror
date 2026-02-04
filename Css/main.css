@@ -89,6 +89,10 @@ input{
     display: flex;
     padding: 42px;}
 
+.navbar-float{
+    background-color: #67161F;
+    border-radius: 15px;
+}
 .navbar-toggler-icon{
     background-color: #F0DBBE;
     border-radius: 5px;
