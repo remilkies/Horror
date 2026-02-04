@@ -92,6 +92,7 @@ input{
 .navbar-float{
     background-color: #67161F;
     border-radius: 15px;
+    margin-top: 1em;
 }
 .navbar-toggler-icon{
     background-color: #F0DBBE;
