@@ -79,24 +79,19 @@ input{
     font-size: 50px;
 }
 
-header{
-    margin-bottom: 4.4%;
-}
 
 .modal-body{
     font-family: "Creepster", system-ui;
 }
 
 .navbar{
-    background-color: #661219;
+    background-color: #67161F;
     display: flex;
-    padding: 42px;
-}
+    padding: 42px;}
 
 .navbar-toggler-icon{
     background-color: #F0DBBE;
     border-radius: 5px;
-    border
 }
 
 #searchBar input{
