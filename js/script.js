@@ -64,6 +64,9 @@ class User{
     this.age = age;
   }
 }
+
+// <div id='put every id for every movie here so i can grab it in js and wont have to make individual pages for every movie, just click the movie and it will trigger the corresponding things info and review'></div> , you're still going to have to do the api thing like 100 times tho unless you find an api thing that lets you access every movie at once and then filter it based on what movie was clicked. 
+
 class Movie{
   constructor(title, genre, image, desc){
     this.title = title;
