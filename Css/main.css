@@ -22,6 +22,10 @@ a{
     text-align: center;
 }
 
+#dropdown-nav a:hover{
+    color: #AD2F33;
+}
+
 h1{
     font-family: "Creepster", system-ui;
     color: #67161F;
