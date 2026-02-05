@@ -26,13 +26,12 @@ function getAge(){  //find a way to filter content based on age
 
 function showNav() {
   var div = $('#dropdown-menu');
-  var splash = $('#splashImg');
-  splash.animate({borderTop: '30em', opacity: 1}, 'slow'); //use camelCase for JS properties
   console.log("Navbar toggled, splash background animated.");
-  var navBar = $('#dropdown-nav'); 
+  var navBar = $('#dropdown-nav');  
+  div.animate({ paddingTop: '30em',opacity: 1}, 'slow'); //use camelCase for JS properties
   div.show();
-  navBar.show();
-  console.log('nav cotent shown');
+  // navBar.show();
+  console.log('nav content shown');
 }
 
 $('#navbar-toggler').on("click", function() {
@@ -43,7 +42,7 @@ $('#navbar-close').on("click", function() {
   var div = $('#dropdown-menu');
   var navBar = $('#dropdown-nav');
   navBar.hide();
-  div.hide();
+  div.animate({ paddingTop: '0em',opacity: 1}, 'slow');;
   console.log("Navbar closed, splash background animated.");
 });
 

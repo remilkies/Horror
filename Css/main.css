@@ -112,20 +112,16 @@ input {
 input ::placeholder{
     font-family: "Creepster", system-ui;
     color: #67161F;
+    opacity: 1; /* Firefox */
 }
-#splashImg{
+#splashBackground img{
     width: 100%;
     height: auto;
     position: absolute;
-    border-top: #67161F solid 30em;
-    overflow: hidden;
 }
-
 
 #dropdown-menu{
     background-color: #67161F;
-    padding-top: 0em;
-    opacity: 0;
 
 }
 
@@ -133,6 +129,7 @@ input ::placeholder{
     display: none;
     background-color: #67161F;
     padding-bottom: 4em;
+
 }
 
 .splashContainer{
