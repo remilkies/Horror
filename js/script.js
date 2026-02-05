@@ -42,7 +42,7 @@ $('#navbar-close').on("click", function() {
   var div = $('#dropdown-menu');
   var navBar = $('#dropdown-nav');
   navBar.hide();
-  div.hide();
+  div.animate({ paddingTop: '0em',opacity: 1}, 'slow');;
   console.log("Navbar closed, splash background animated.");
 });
 
