@@ -28,10 +28,10 @@ function showNav() {
   var div = $('#dropdown-menu');
   console.log("Navbar toggled, splash background animated.");
   var navBar = $('#dropdown-nav');  
-  div.animate({ paddingTop: '3em',opacity: 1}, 'slow'); //use camelCase for JS properties
+  div.animate({ paddingTop: '30em',opacity: 1}, 'slow'); //use camelCase for JS properties
   div.show();
-  navBar.show();
-  console.log('nav cotent shown');
+  // navBar.show();
+  console.log('nav content shown');
 }
 
 $('#navbar-toggler').on("click", function() {
