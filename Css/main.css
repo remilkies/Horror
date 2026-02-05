@@ -76,14 +76,6 @@ input{
     font-style: normal;
   }
 
-
-.offcanvas-title{
-    font-family: "Creepster", system-ui;
-    color: #F0DBBE;
-    font-size: 50px;
-}
-
-
 .modal-body{
     font-family: "Creepster", system-ui;
 }
@@ -134,6 +126,8 @@ input ::placeholder{
 
 #dropdown-nav{
     display: none;
+    background-color: #67161F;
+    padding-bottom: 4em;
 }
 
 .splashContainer{
@@ -144,17 +138,15 @@ input ::placeholder{
     font-family: "Creepster", system-ui;
     color: #67161F;
     padding: 15%;
-    margin-top: -50px;
+    /* margin-top: -50px; */
 }
 
 .movieItem{
     font-family: "Creepster", system-ui;
     color: #F0DBBE;
     padding: 30px;
-    flex: 30%;
     align-items: center;
     align-content: row;
-    border: 20px;
     background-color: #67161F;
     border-radius: 16px;
     margin: 2em;
