@@ -112,16 +112,21 @@ input {
 input ::placeholder{
     font-family: "Creepster", system-ui;
     color: #67161F;
-    opacity: 1; /* Firefox */
 }
-#splashBackground img{
+#splashImg{
     width: 100%;
     height: auto;
     position: absolute;
+    border-top: #67161F solid 30em;
+    overflow: hidden;
 }
+
 
 #dropdown-menu{
     background-color: #67161F;
+    padding-top: 0em;
+    opacity: 0;
+
 }
 
 #dropdown-nav{

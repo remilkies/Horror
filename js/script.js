@@ -26,9 +26,10 @@ function getAge(){  //find a way to filter content based on age
 
 function showNav() {
   var div = $('#dropdown-menu');
+  var splash = $('#splashImg');
+  splash.animate({borderTop: '30em', opacity: 1}, 'slow'); //use camelCase for JS properties
   console.log("Navbar toggled, splash background animated.");
-  var navBar = $('#dropdown-nav');  
-  div.animate({ paddingTop: '3em',opacity: 1}, 'slow'); //use camelCase for JS properties
+  var navBar = $('#dropdown-nav'); 
   div.show();
   navBar.show();
   console.log('nav cotent shown');
