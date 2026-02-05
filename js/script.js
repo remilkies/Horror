@@ -71,24 +71,35 @@ class Movie{
     this.desc = desc;
   }
 }
+// !async function(){ //different api, just testing it out, not sure if this is the one i want to use yet, but it's free which is nice.
+//   const options = {
+//   method: 'GET',
+//   headers: {
+//     accept: 'application/json',
+//     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZDE2OWZkMTg5MDg0NGZkNGZiMGMzYmI5YWIzOTkzMCIsIm5iZiI6MTc1OTQwNzA5MC41NDcwMDAyLCJzdWIiOiI2OGRlNmJmMjJkMGI0YTkwYjZkYTU3OWUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.H3q6GBug0aWNLQPpsTml0iQE9AAWo8QJzI2GBSxWuP4'
+//   }
+// };
+
+// let data = await fetch('https://api.themoviedb.org/3/configuration', options)
+//   .then(response => response.json())
+//   .catch(error => console.error(error));
+// }();
 
 !async function(){  
+  
+  const url = 'https://imdb236.p.rapidapi.com/api/imdb/tt28821371';
+  const options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': '85a3293347msh341b57b0132f25ep100f98jsn6d6bf29d1206',
+      'x-rapidapi-host': 'imdb236.p.rapidapi.com'
+    }
+  };
 
-const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZDE2OWZkMTg5MDg0NGZkNGZiMGMzYmI5YWIzOTkzMCIsIm5iZiI6MTc1OTQwNzA5MC41NDcwMDAyLCJzdWIiOiI2OGRlNmJmMjJkMGI0YTkwYjZkYTU3OWUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.H3q6GBug0aWNLQPpsTml0iQE9AAWo8QJzI2GBSxWuP4'
-  }
-};
+let data = await fetch(url, options)
+.then((response) => response.json())
+.catch((error) => console.error(error));
 
-let data = await fetch('https://api.themoviedb.org/3/configuration', options)
-  .then(response => response.json())
-  .catch(error => console.error(error));
-
-// let data = await fetch(url, options)
-// .then((response) => response.json())
-// .catch((error) => console.error(error));
 
 console.log(data); 
 
