@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import { Image } from 'react-bootstrap'
+import './style.css'
+import typescriptLogo from './assets/typescript.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import { setupCounter } from './counter.ts'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-import './App.css'
-
-import  splashImg from './assets/images/splash.png'
-
-function App() {
-  
-
-  return (
-    <>
-<header id="home">
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+    <header id="home">
       <nav class="navbar">
         <div class="container-fluid">
           <div
@@ -48,7 +43,7 @@ function App() {
       </nav>
     </header>
 
-    {/* <!-- look at movie project where the card slides to reveal movie info --> */}
+    <!-- look at movie project where the card slides to reveal movie info -->
     <div id="splashBackground">
       <div id="dropdown-menu">
         <div id="dropdown-container">
@@ -122,13 +117,11 @@ function App() {
             </div>
           </div>
           <div id="splashImg">
-            <Image src={splashImg} />
+            <img src="assets/images/splash.png" />
           </div>
         </div>
       </div>
     </div>
-    </>
-  )
-}
+`
 
-export default App
+setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
