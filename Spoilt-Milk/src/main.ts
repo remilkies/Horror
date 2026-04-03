@@ -1,9 +1,8 @@
 import './style.css'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import { setupCounter } from './counter.ts'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logoLight from 'assets/logos/logoLight.png';
+import splashImg from 'assets/images/splash.png';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <header id="home">
@@ -16,7 +15,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
               <div class="p-2">
                 <a class="navbar-brand" href="index.html"
                   ><img
-                    src="assets/logos/logoLight.png"
+                    src=${logoLight}
                     width="100px"
                     height="50px"
                 /></a>
@@ -117,7 +116,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             </div>
           </div>
           <div id="splashImg">
-            <img src="assets/images/splash.png" />
+            <img src=${splashImg}} />
           </div>
         </div>
       </div>
