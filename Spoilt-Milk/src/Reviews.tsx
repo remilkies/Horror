@@ -1,0 +1,3 @@
+// Acure called wellness = the true meaning of horror is to make you preogressivly uncomfortable intil that discomfortturns into uneasiness, suspense and eventually fear. 
+// insert the Quote: You cannot force : "When a blind man can see for the first time, they cannot go back to the darkness as much as they can be unborn"
+//tags body horror, cult-vibes,

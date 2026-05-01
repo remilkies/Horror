@@ -1,0 +1,111 @@
+.password-container{
+    border: 2px solid #67161F;
+    padding: 1px;
+    min-width: 600px;
+    height: 100vh;
+    width: 100vw;
+}
+/* Center the whole instrument */
+.slider-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+    align-items: center;
+    width: 80vw; 
+    margin: 0 auto;
+}
+
+.slider-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px; /* Wider footprint for each slider */
+    height: 400px;
+    position: relative;
+}
+
+.blood-slider {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
+    transform: rotate(-90deg);
+    
+    width: 300px; /* Make the veins longer */
+    height: 12px;   /* Make the veins thicker */
+    border-radius: 6px;
+    background-color: rgba(103, 22, 31, 0.2);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+    /* Smooth transition for the pulse */
+    transition: all 0.3s ease;
+    
+}
+
+/* The Veiny Pulse Effect */
+.blood-slider:active {
+    height: 16px; /* Thicken the vein while dragging */
+    box-shadow: 0 0 20px #AD2F33; /* Red glow pulse */
+    transition: height 0.1s ease;
+}
+
+.blood-slider:active.blood-slider::-webkit-slider-thumb{
+    margin-top: -22px;
+}
+
+/* Adjust the drop centering for the thicker line */
+.blood-slider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 45px; 
+    height: 60px; 
+    background-image: url('../assets/bloodDrop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: grab;
+    
+    /* Centering math: (Thumb Height / 2) - (Track Height / 2) */
+    /* 60/2 = 30; 8/2 = 4; So -26px */
+    margin-top: -26px; 
+    border: none;
+    margin-left: 0;
+}
+
+.blood-slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    transform: scale(1.1); /* Drop grows slightly when grabbed */
+}
+
+.slider-col{
+    cursor: grab;
+}
+
+.current-note{
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #67161F;
+    z-index: 10;
+}
+
+.controls-btn{
+    color: #F0DBBE;
+    background-color: transparent;
+    border: none;
+}
+
+.controls-btn:hover{
+    color: #AD2F33;
+    transform: scale(1.5);
+}
+
+.password-controls{
+    background-color: #F0DBBE;
+    color: #F0DBBE;
+}
+
+.password-string{
+    background-color: #F0DBBE;
+    color: #F0DBBE;
+}
