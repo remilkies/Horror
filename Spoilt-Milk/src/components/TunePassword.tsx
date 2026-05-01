@@ -31,7 +31,7 @@ const TunePassword = () => {
 
         const gainNode = audioCtx.createGain();
 
-        oscillator.type = 'sine'
+        oscillator.type = 'sine' //make it sound creepy and synthy :P
 
         oscillator.frequency.value = NOTES[note];
 
