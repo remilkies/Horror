@@ -31,22 +31,22 @@ Want to run this haunted house on your local machine? Follow these cursed steps:
 
 
 **1. Clone the repository**
-```bash`
-git clone https://github.com/remilkies/spoilt-milk.git
+```bash```
+```git clone https://github.com/remilkies/spoilt-milk.git ```
 
 **2. Install the Frontend dependencies**
-```bash`
-    cd frontend
-    npm install
+```bash```
+    ```cd frontend
+    npm install```
 
 **3. Set up the Environment Variables**
 Create a .env file in the frontend directory and add your TMDB API Key (sorry babe, you gotta get your own movie ticket T-T):
-```env`
-VITE_TMDB_KEY=your_sacred_api_key_here
+```env```
+```VITE_TMDB_KEY=your_sacred_api_key_here```
 
 **4. Boot up the Vite server**
-```bash`
-npm run dev
+```bash```
+```npm run dev```
 
 
 "Can you tell that I love found-footage yet?" - The Dev 📹
