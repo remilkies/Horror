@@ -1,6 +1,6 @@
 # 🥛 Spoilt Milk 🩸
 
-**"The worse version of Rotten Tomatoes. Reviews from certified yappers."**
+**"The worse version of Rotten Tomatoes. Reviews from a certified yapper."**
 
 Welcome to **Spoilt Milk**, a Full-Stack horror movie database and custom review platform built for the chaotic, dehydrated, and found-footage-obsessed developer. Also, not to brag, but **my site has a pretty drippy navbar**.
 
@@ -12,8 +12,7 @@ Spoilt Milk is a custom-built MERN stack (MongoDB, Express, React, Node.js) appl
 ## 🕷️ Features
 * **The Drippy Navbar:** A custom-built, buttery-smooth CSS dropdown animation that literally drips down the screen. (R.I.P. to the old jQuery version).
 * **Infinite Nightmares:** Fully integrated with the **TMDB API** to search and pull data, posters, and runtimes for literally any horror movie in existence.
-* **The Grimoire (Backend):** A custom Node/Express backend wired to MongoDB that saves my personal reviews, ratings, and thoughts directly to my own database.
-* **Persistent Age Gate:** A custom React `useEffect` and Local Storage implementation to ensure only certified adults can enter the nightmare (without getting jumpscared by the modal on every refresh).
+* **Persistent Age Gate:** A custom React `useEffect` and Local Storage implementation to ensure only certified adults can enter the nightmare.
 
 ---
 
@@ -40,7 +39,8 @@ Want to run this haunted house on your local machine? Follow these cursed steps:
     npm install```
 
 **3. Set up the Environment Variables**
-Create a .env file in the frontend directory and add your TMDB API Key (sorry babe, you gotta get your own movie ticket T-T):
+* Create a .env file in the frontend directory and add your TMDB API Key 
+* (sorry babe, you gotta get your own movie ticket T-T):
 ```env```
 ```VITE_TMDB_KEY=your_sacred_api_key_here```
 
@@ -49,4 +49,4 @@ Create a .env file in the frontend directory and add your TMDB API Key (sorry ba
 ```npm run dev```
 
 
-"Can you tell that I love found-footage yet?" - The Dev 📹
+* "Can you tell that I love found-footage yet?" - The Dev 📹
